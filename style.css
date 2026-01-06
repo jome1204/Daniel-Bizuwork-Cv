@@ -222,65 +222,107 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* MOBILE RESPONSIVE FIXES */
+@media (max-width: 900px) {
+  /* Stack left and right sections */
+  .container {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .left_Side,
+  .right_Side {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Center profile image and text */
+  .profileText {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .profileText .imgBx {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+  }
+
+  .profileText h2 {
+    font-size: 1.2em;
+  }
+
+  .profileText span {
+    font-size: 0.8em;
+  }
+
+  /* Contact info spacing */
+  .contactInfo ul li {
+    flex-wrap: wrap;
+    font-size: 0.9em;
+  }
+
+  /* Education & Languages spacing */
+  .contactInfo.education li h5,
+  .contactInfo.education li h4 {
+    font-size: 0.9em;
+  }
+
+  .contactInfo.language .percent {
+    height: 6px;
+  }
+}
+
+/* Extra small screens (mobile phones) */
 @media (max-width: 600px) {
   .about .box {
     flex-direction: column;
+    gap: 10px;
   }
+
   .about .box .year_company {
-    margin-bottom: 5px;
+    min-width: 100%;
   }
+
+  .skills .box,
   .interest ul {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
-  .skills .box {
-    grid-template-columns: repeat(1, 1fr);
+
+  .container {
+    margin: 10px auto;
   }
-}
-.englishw50 {
-  width: 60%;
-}
-.russianw90 {
-  width: 90%;
-}
-.frenchw30 {
-  width: 30%;
-}
-.htmlws30 {
-  width: 50%;
-}
-.cssws45 {
-  width: 45%;
-}
-.jsws70 {
-  width: 70%;
-}
-.phws40 {
-  width: 40%;
-}
-.ilws60 {
-  width: 60%;
-}
-.adw70 {
-  width: 70%;
-}
-/* Mobile devices - max width 600px */
-@media (max-width: 600px) {
+
   body {
-    font-size: 16px; /* Adjust text size */
-    padding: 10px; /* Reduce padding */
+    padding: 10px;
   }
 
-  header,
-  nav,
-  main,
-  footer {
-    width: 100%; /* Make sections full width */
+  /* Scale images smaller */
+  .profileText .imgBx {
+    width: 100px;
+    height: 100px;
   }
 
-  img {
-    max-width: 100%; /* Images scale on small screens */
-    height: auto;
+  .profileText h2 {
+    font-size: 1em;
   }
 
-  /* Any other adjustments, e.g., menu or layout */
+  .profileText span {
+    font-size: 0.75em;
+  }
+
+  .contactInfo ul li {
+    font-size: 0.85em;
+  }
+
+  .contactInfo h3 {
+    font-size: 1em;
+  }
+
+  .about p,
+  .about ul,
+  .about li {
+    font-size: 0.9em;
+  }
 }
