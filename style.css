@@ -263,3 +263,24 @@ p {
 .adw70 {
   width: 70%;
 }
+/* Mobile devices - max width 600px */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px; /* Adjust text size */
+    padding: 10px; /* Reduce padding */
+  }
+
+  header,
+  nav,
+  main,
+  footer {
+    width: 100%; /* Make sections full width */
+  }
+
+  img {
+    max-width: 100%; /* Images scale on small screens */
+    height: auto;
+  }
+
+  /* Any other adjustments, e.g., menu or layout */
+}
